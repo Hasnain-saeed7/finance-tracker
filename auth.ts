@@ -7,6 +7,8 @@ import bcrypt from 'bcryptjs'
 import connectDB from '@/lib/db'
 import User from '@/lib/models/User'
 
+export const runtime='nodejs' 
+
 export const { handlers, auth, signIn, signOut } = NextAuth({
   session: { strategy: 'jwt' },
   pages: {
