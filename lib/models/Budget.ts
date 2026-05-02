@@ -13,4 +13,4 @@ const BudgetSchema = new Schema<IBudget>({
 BudgetSchema.index({ userId: 1, category: 1, month: 1 }, { unique: true })
 
 const Budget = models.Budget || mongoose.model<IBudget>('Budget', BudgetSchema)
-export default Budget
+export default Budget 
