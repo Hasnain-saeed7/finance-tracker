@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { signIn } from 'next-auth/react'
 
 export default function RegisterPage() {
   const router = useRouter()
@@ -67,7 +68,10 @@ export default function RegisterPage() {
               {loading ? 'Creating account...' : 'Create account'}
             </Button>
           </form> 
-          
+
+               * <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/login' })}>
+            Continue with Google
+          </Button>   
 
           <p className="text-center text-sm text-muted-foreground">
             Already have an account?{' '}

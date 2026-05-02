@@ -68,9 +68,9 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/dashboard' })}>
+          {/* <Button variant="outline" className="w-full" onClick={() => signIn('google', { callbackUrl: '/dashboard' })}>
             Continue with Google
-          </Button>
+          </Button> */}
 
           <p className="text-center text-sm text-muted-foreground">
             No account?{' '}

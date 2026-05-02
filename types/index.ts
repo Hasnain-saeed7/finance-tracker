@@ -53,3 +53,29 @@ export interface MonthlyTotal {
   income: number
   expenses: number
 }
+
+
+
+
+// Add to types/index.ts
+export type InvestmentCategory =
+  | 'stocks'
+  | 'crypto'
+  | 'real-estate'
+  | 'gold'
+  | 'mutual-funds'
+  | 'savings'
+  | 'business'
+  | 'other'
+
+export interface IInvestment {
+  _id: string
+  userId: string
+  name: string
+  category: InvestmentCategory
+  amountInvested: number
+  currentValue: number
+  date: Date
+  notes: string
+  createdAt: Date
+}
