@@ -11,15 +11,11 @@ export default function SpendingPieChart({ data }: { data: CategoryTotal[] }) {
   return (
     <ResponsiveContainer width="100%" height={250}>
       <PieChart>
-         <Pie 
-  data={data} 
-  dataKey="total" 
-  nameKey="category" 
-  cx="50%" 
-  cy="50%" 
-  outerRadius={80} 
-  label={(entry) => entry.category} 
-/>
+        <Pie data={data} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={80} label>
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
         <Tooltip formatter={(val: any) => `$${val.toFixed(2)}`} />
         <Legend />
       </PieChart>
