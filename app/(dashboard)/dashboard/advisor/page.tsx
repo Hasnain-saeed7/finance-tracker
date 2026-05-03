@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Brain, Loader2, RefreshCw } from "lucide-react"
+import { Brain, Loader2, RefreshCw, DollarSign, BarChart2, TrendingUp } from "lucide-react"
 
 export default function AdvisorPage() {
   const [advice, setAdvice] = useState("")
@@ -107,19 +107,29 @@ export default function AdvisorPage() {
       {/* Info cards */}
       {!ran && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          {[
-            { icon: "💰", title: "Balance & Cash Flow", desc: "Analyses your income vs expenses and savings rate" },
-            { icon: "📊", title: "Budget Health", desc: "Checks which budgets are on track and which are overrun" },
-            { icon: "📈", title: "Investment Portfolio", desc: "Reviews diversification, P&L, and rebalancing needs" },
-          ].map(item => (
-            <Card key={item.title}>
-              <CardContent className="pt-6">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.title}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{item.desc}</p>
-              </CardContent>
-            </Card>
-          ))}
+          <Card>
+            <CardContent className="pt-6">
+              <DollarSign size={28} className="text-gray-700 mb-3" />
+              <h3 className="font-semibold text-gray-900 text-sm mb-1">Balance & Cash Flow</h3>
+              <p className="text-xs text-gray-400 leading-relaxed">Analyses your income vs expenses and savings rate</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6">
+              <BarChart2 size={28} className="text-gray-700 mb-3" />
+              <h3 className="font-semibold text-gray-900 text-sm mb-1">Budget Health</h3>
+              <p className="text-xs text-gray-400 leading-relaxed">Checks which budgets are on track and which are overrun</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="pt-6">
+              <TrendingUp size={28} className="text-gray-700 mb-3" />
+              <h3 className="font-semibold text-gray-900 text-sm mb-1">Investment Portfolio</h3>
+              <p className="text-xs text-gray-400 leading-relaxed">Reviews diversification, P&L, and rebalancing needs</p>
+            </CardContent>
+          </Card>
         </div>
       )}
 
