@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { ArrowRight, BarChart2, Target, Sparkles, ShieldCheck, Zap, TrendingUp } from "lucide-react";
+import { ArrowRight, BarChart2, Target, Sparkles, ShieldCheck, Zap, TrendingUp, Landmark } from "lucide-react";
 
 export default function Home() {
   return (
@@ -9,7 +9,10 @@ export default function Home() {
       {/* Nav */}
       <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="text-xl font-bold text-gray-900">💰 FinanceAI</div>
+          <div className="text-xl font-bold text-gray-900 inline-flex items-center gap-2">
+            <Landmark size={20} className="text-gray-900" />
+            <span>FinanceAI</span>
+          </div>
           <nav className="flex items-center gap-3 md:gap-8">
             <Link href="#features" className="hidden md:block text-sm text-gray-500 hover:text-gray-900 transition-colors">Features</Link>
             <Link href="/login" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Sign in</Link>
