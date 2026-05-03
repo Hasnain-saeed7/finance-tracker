@@ -53,15 +53,15 @@ export default function InsightsPage() {
   }
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-between mb-6">
+    <div className="p-4 md:p-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">AI Insights</h2>
           <p className="text-gray-500 text-sm mt-1">Powered by Claude — get smart analysis of your spending</p>
         </div>
-        <div className="flex items-center gap-3">
-          <Input type="month" value={month} onChange={e => setMonth(e.target.value)} className="w-40" />
-          <Button onClick={fetchInsights} disabled={loading} className="gap-2">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          <Input type="month" value={month} onChange={e => setMonth(e.target.value)} className="w-full sm:w-40" />
+          <Button onClick={fetchInsights} disabled={loading} className="gap-2 w-full sm:w-auto">
             {loading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
             {loading ? "Analysing..." : "Analyse"}
           </Button>

@@ -86,15 +86,15 @@ export default function AdvisorPage() {
   }
 
   return (
-    <div className="p-8">
-      <div className="flex items-start justify-between mb-6">
+    <div className="p-4 md:p-8">
+      <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-6 gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">AI Financial Advisor</h2>
           <p className="text-gray-500 text-sm mt-1">
             Full analysis based on your balance, transactions, budgets, and investments
           </p>
         </div>
-        <Button onClick={fetchAdvice} disabled={loading} className="gap-2">
+        <Button onClick={fetchAdvice} disabled={loading} className="gap-2 w-full sm:w-auto">
           {loading
             ? <><Loader2 size={16} className="animate-spin" /> Analysing...</>
             : ran

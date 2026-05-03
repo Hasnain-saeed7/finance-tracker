@@ -28,7 +28,7 @@ export default async function DashboardPage() {
   const monthlyData = groupByMonth(transactions as any)
 
   return (
-    <div className="p-8">
+    <div className="p-4 md:p-8">
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
 
       {/* Summary cards */}
