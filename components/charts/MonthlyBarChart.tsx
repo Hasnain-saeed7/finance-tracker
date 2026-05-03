@@ -12,7 +12,7 @@ export default function MonthlyBarChart({ data }: { data: { month: string; incom
         <YAxis tick={{ fontSize: 12 }} />
         <Tooltip formatter={(val: any) => `$${val.toFixed(2)}`} />
         <Legend />
-        <Bar dataKey="income" fill="#22c55e" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="income" fill="pink" radius={[4, 4, 0, 0]} />
         <Bar dataKey="expenses" fill="#ef4444" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
